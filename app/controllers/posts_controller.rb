@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %w(show edit update destroy) 
   def index
-    @post = Post.order(id: "asc")
+    @posts = Post.order(id: "asc")
   end
 
   def show
@@ -13,14 +13,14 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    redirect_to podt
+    redirect_to @post
   end
 
   def edit
   end
 
   def update
-    @post.update
+    @post.update!(post_params)
     redirect_to @post
   end
 
