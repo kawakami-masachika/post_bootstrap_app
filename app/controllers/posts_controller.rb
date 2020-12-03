@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    redirect_to @post, notice: "投稿しました"
+    redirect_to @post, notice: "投稿しました" if @post.save
   end
 
   def edit
