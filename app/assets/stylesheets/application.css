@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap-grid.scss";
+
 
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
